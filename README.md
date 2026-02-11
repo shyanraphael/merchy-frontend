@@ -1,1 +1,1 @@
-"# merchy-frontend" 
+Merchy is a modern e-commerce web interface built for a women’s clothing brand. It focuses on a clean, elegant UI, responsive design, and smooth user experience for browsing collections, viewing products, and shopping effortlessly. The project emphasizes scalable frontend architecture, consistent design language, and performance, making it suitable for a real-world fashion brand storefront.
