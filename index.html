@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchy | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="page-wrapper">
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="main">
+                    <div id="navbar-placeholder"></div>
+
+                    <div class="content">
+                        <h1 class="gradientText">PREMIUM COLLECTION</h1>
+                        <p>Timeless styles crafted to celebrate confidence, grace, and individuality.</p>
+                    </div>
+                </div>
+
+                <div class="coll">
+                    <div class="leftColl">
+                        <h2 class="coll">NEW COLLECTION</h2>
+                    </div>
+
+                    <div class="rightColl">
+                        <button class="shop-all"><span><a href="shop.html"> SHOP ALL</a></span></button>
+                    </div>
+                    
+                </div>
+
+                <div class="items">
+                    <a href="product.html?id=1" class="product-link">
+                        <div class="item-card" data-id="1" data-category="Dress" data-price="12000">
+                            <div class="item-image">
+                                <img src="images/dress_1.jpg" alt="Item 01">
+                            </div>
+                            <h3 class="item-name">Black Elegance Dress</h3>
+                            <p class="item-price">Rs.12,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+                    
+                    <a href="product.html?id=2" class="product-link">
+                        <div class="item-card" data-id="2" data-category="Skirt" data-price="6000">
+                            <div class="item-image">
+                                <img src="images/skirt_1.jpg" alt="Item 02">
+                            </div>
+                            <h3 class="item-name">Royal Violet Skirt</h3>
+                            <p class="item-price">Rs.6,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=3" class="product-link">
+                        <div class="item-card" data-id="3" data-category="Suit" data-price="17000">
+                            <div class="item-image">
+                                <img src="images/suit_1.jpg" alt="Item 03">
+                            </div>
+                            <h3 class="item-name">Blush Chic Suit</h3>
+                            <p class="item-price">Rs.17,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=4" class="product-link">
+                        <div class="item-card" data-id="4" data-category="Dress" data-price="9000">
+                            <div class="item-image">
+                                <img src="images/dress_2.jpg" alt="Item 04">
+                            </div>
+                            <h3 class="item-name">Sky Glow Dress</h3>
+                            <p class="item-price">Rs.9,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // ✅ INIT CART ONLY AFTER NAVBAR EXISTS
+                initCart();
+            });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

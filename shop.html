@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchy | Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="page-wrapper">
+        <div class="bg-wrapper">
+            <div class="gradient-bg"></div>
+        </div>
+        <div id="navbar-placeholder"></div>
+
+        <h1 class="searchText">Search Products</h1>
+        <div class="search-wrapper">
+            <input class="srch" id="srch" type="search" placeholder="Search for a product" onkeyup="search()">
+            <a href="#"><button class="srchBtn">Search</button></a>
+
+            <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="filters">
+                    <div id="filter-buttons">
+                        <button class="button-value">All</button>
+                        <button class="button-value">Skirt</button>
+                        <button class="button-value">Dress</button>
+                        <button class="button-value">Suit</button>
+
+                        <div id="filter-slider"></div>
+                    </div>
+
+                    <div id="sort-drop">
+                        <button class="sortBtn">Sort by Price</button>
+                        <ul class="dropdown">
+                            <li><a href="#" data-sort="default">Default</a></li>
+                            <li><a href="#" data-sort="low">Low to High</a></li>
+                            <li><a href="#" data-sort="high">High to Low</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <div class="items-shop" id="items-shop">
+                    <a href="product.html?id=1" class="product-link">
+                        <div class="item-card" data-id="1" data-category="Dress" data-price="12000">
+                            <div class="item-image">
+                                <img src="images/dress_1.jpg" alt="Item 01">
+                            </div>
+                            <h3 class="item-name">Black Elegance Dress</h3>
+                            <p class="item-price">Rs.12,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+                    
+                    <a href="product.html?id=2" class="product-link">
+                        <div class="item-card" data-id="2" data-category="Skirt" data-price="6000">
+                            <div class="item-image">
+                                <img src="images/skirt_1.jpg" alt="Item 02">
+                            </div>
+                            <h3 class="item-name">Royal Violet Skirt</h3>
+                            <p class="item-price">Rs.6,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=3" class="product-link">
+                        <div class="item-card" data-id="3" data-category="Suit" data-price="17000">
+                            <div class="item-image">
+                                <img src="images/suit_1.jpg" alt="Item 03">
+                            </div>
+                            <h3 class="item-name">Blush Chic Suit</h3>
+                            <p class="item-price">Rs.17,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=4" class="product-link">
+                        <div class="item-card" data-id="4" data-category="Dress" data-price="9000">
+                            <div class="item-image">
+                                <img src="images/dress_2.jpg" alt="Item 04">
+                            </div>
+                            <h3 class="item-name">Sky Glow Dress</h3>
+                            <p class="item-price">Rs.9,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=5" class="product-link">
+                        <div class="item-card" data-id="5" data-category="Dress" data-price="11000">
+                            <div class="item-image">
+                                <img src="images/dress_3.jpg" alt="Item 05">
+                            </div>
+                            <h3 class="item-name">Ivory Wool Grace Set</h3>
+                            <p class="item-price">Rs.11,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=6" class="product-link">
+                        <div class="item-card" data-id="6" data-category="Dress" data-price="9500">
+                            <div class="item-image">
+                                <img src="images/dress_4.jpg" alt="Item 06">
+                            </div>
+                            <h3 class="item-name">Ashwood Classic Ensemble</h3>
+                            <p class="item-price">Rs.9,500</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=7" class="product-link">
+                        <div class="item-card" data-id="7" data-category="Skirt" data-price="7500">
+                            <div class="item-image">
+                                <img src="images/skirt_2.jpg" alt="Item 07">
+                            </div>
+                            <h3 class="item-name">Pearl Silhouette Skirt</h3>
+                            <p class="item-price">Rs.7,500</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=8" class="product-link">
+                        <div class="item-card" data-id="8" data-category="Skirt" data-price="7000">
+                            <div class="item-image">
+                                <img src="images/skirt_3.jpg" alt="Item 08">
+                            </div>
+                            <h3 class="item-name">Alabaster Muse Skirt</h3>
+                            <p class="item-price">Rs.7,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=9" class="product-link">
+                        <div class="item-card" data-id="9" data-category="Suit" data-price="12500">
+                            <div class="item-image">
+                                <img src="images/suit_2.jpg" alt="Item 09">
+                            </div>
+                            <h3 class="item-name">Noir Sovereign Coat Suit</h3>
+                            <p class="item-price">Rs.12,500</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=10" class="product-link">
+                        <div class="item-card" data-id="10" data-category="Suit" data-price="14000">
+                            <div class="item-image">
+                                <img src="images/suit_3.jpg" alt="Item 10">
+                            </div>
+                            <h3 class="item-name">Desert Bloom Suit</h3>
+                            <p class="item-price">Rs.14,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=11" class="product-link">
+                        <div class="item-card" data-id="11" data-category="Suit" data-price="16500">
+                            <div class="item-image">
+                                <img src="images/suit_4.jpg" alt="Item 11">
+                            </div>
+                            <h3 class="item-name">Linen Dune Suit</h3>
+                            <p class="item-price">Rs.16,500</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                    
+
+                    <a href="product.html?id=12" class="product-link">
+                        <div class="item-card" data-id="12" data-category="Dress" data-price="10000">
+                            <div class="item-image">
+                                <img src="images/dress_5.png" alt="Item 2">
+                            </div>
+                            <h3 class="item-name">Starlit Floré Dress</h3>
+                            <p class="item-price">Rs.10,000</p>
+                            <button class="add-cart"><span>Add to Cart</span></button>
+                        </div>
+                    </a>
+                </div>
+                <p id="no-results" class="no-results">No products found</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <script>    
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // ✅ INIT CART ONLY AFTER NAVBAR EXISTS
+                initCart();
+            });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

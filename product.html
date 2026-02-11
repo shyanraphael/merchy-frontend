@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchy | Products</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div id="navbar-placeholder"></div>
+            <div class="product-container">
+                <div class="product-image">
+                    <img id="product-img" src="" alt="Product Image">
+                </div>
+
+                <div class="product-details">
+                    <h1 id="product-name"></h1>
+                    <p id="product-description"></p>
+                    <p id="product-price"></p>
+
+                    <label for="size-select">Select Size:</label>
+                    <select id="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+
+                    <button id="add-to-cart">Add to Cart</button>
+                    <button id="size-guide-btn">Size Guide</button>
+                </div>
+
+                <div id="size-guide-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <img class="sizeImage" src="images/sizeGuide.png" alt="Size Guide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="footer-placeholder"></div>
+    <script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <script>    
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // ✅ INIT CART ONLY AFTER NAVBAR EXISTS
+                initCart();
+            });
+    </script>   
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

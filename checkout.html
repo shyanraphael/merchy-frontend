@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch | Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<body class="check-back">
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div id="navbar-placeholder"></div>
+            <div class="checkout-gap"></div>
+            <main class="checkout-layout">
+                <div class="checkout-left">
+                    <section class="section">
+                        <h2>Contact <i id="contactIcon" class="fa-solid fa-phone-volume"></i></i></h2>
+                        <input placeholder="Email" />
+
+                        <h2>Delivery <i id="deliverIcon" class="fa-solid fa-truck"></i></h2>
+
+                        <select class="country-select">
+                            <option>Sri Lanka</option>
+                            <option>USA</option>
+                            <option>UAE</option>
+                        </select>
+
+                        <div class="row">
+                            <input placeholder="First name" />
+                            <input placeholder="Last name" />
+                        </div>
+
+                        <input placeholder="Address" />
+                        <input placeholder="Apartment, suite, etc. (optional)" />
+
+                        <div class="row">
+                            <input placeholder="City" />
+                            <input placeholder="Postal code (optional)" />
+                        </div>
+
+                        <input placeholder="Phone" />
+                        </section>
+
+                        <section class="section">
+                        <h2>Shipping method <i id="shipIcon" class="fa-solid fa-truck-fast"></i></h2>
+
+                        <div class="shipping">
+                            <span>Standard<br><small>2–3 Business Days</small></span>
+                            <strong>Rs 399.00</strong>
+                        </div>
+
+                        <h2>Payment</h2>
+                        <p class="secure">All transactions are secure and encrypted.</p>
+
+                        <div class="payment-option active">
+                            Credit card
+                            <i id="cardIcon" class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <input placeholder="Card number" />
+                        <div class="row">
+                            <input placeholder="MM / YY" />
+                            <input placeholder="Security code" />
+                        </div>
+                        <input placeholder="Name on card" />
+
+                        <button class="pay">Pay now</button>
+                    </section>
+            </div>
+
+                <div class="checkout-right">
+                    <ul class="checkout-items"></ul>
+                    <div class="checkout-summary">
+                        <div class="summary-row subtotal">
+                            <span>Subtotal</span>
+                            <span class="subtotal-value"></span>
+                        </div>
+
+                        <div class="summary-row shipping">
+                            <span>Shipping</span>
+                            <span class="shipping-value">Rs. 650</span>
+                        </div>
+
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span class="total-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="checkout-loop">
+                <div class="checkout-track">
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                    <span>CHECKOUT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>    
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // ✅ INIT CART ONLY AFTER NAVBAR EXISTS
+                initCart();
+            });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
